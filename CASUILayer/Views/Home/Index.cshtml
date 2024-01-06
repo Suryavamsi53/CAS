@@ -1,0 +1,119 @@
+﻿
+@{
+ ViewBag.Title = "CAS";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>CAS</title>    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/Scripts/css/bootstrap.min.css">
+  
+    <style>
+        .banner_section 
+        {
+            padding-bottom: 255px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .layout_padding {
+            padding-top: 90px;
+            padding-bottom: 0px;
+        }
+
+        .header_section {
+            width: 100%;
+            float: left;
+            background-image: url(../images/banner-bg.png);
+            height: auto;
+            background-size: 100%;
+            padding: 10px 0px 25px 0px;
+            background-repeat: no-repeat;
+        }
+
+        .copyright_section {
+            width: 100%;
+            float: left;
+            padding-bottom: 50px;
+            background-color: #252525;
+            height: auto;
+        }
+
+        .copyright_text {
+            width: 100%;
+            float: left;
+            font-size: 16px;
+            margin-left: 0px;
+            color: #fff;
+            text-align: center;
+        }
+
+            .copyright_text a {
+                color: #ffffff;
+            }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header_section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><img src="~/Scripts/icons/clinical-dark.png"><h3>Clinical Automation System</h3></div>         
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-link">@Html.ActionLink("Patients", "PatientLogin", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-link">@Html.ActionLink("Doctor", "DoctorLogin", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-link">@Html.ActionLink("Front Office Executives", "FrontOfficeLogin", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-link">@Html.ActionLink("Pharmacists", "PharmacistsLogin", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-link">@Html.ActionLink("Admin", "AdminLogin", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </nav>
+        <div id="main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="banner_section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h1 class="banner_taital">Health <br><span style="color: #151515;">Care</span></h1>
+                                    <p class="banner_text">We are here for your Health </p>
+                                     <div class="btn_main">
+                                        <div class="more_bt"><a href="@Url.Action("PatientLogin", "Home")">Meet Doctor</a></div>
+                                        
+                                     </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image_1"><img src="~/Scripts/images/img-1.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+        <footer>
+            <div class="copyright_section">
+                <div class="container">
+                    <p class="copyright_text">2024 All Rights Reserved. Design by CAS Team</a></p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
+
+
